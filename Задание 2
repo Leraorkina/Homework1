@@ -1,0 +1,11 @@
+def is_palindrome(text):
+  n = len(text)
+  for i in range(n // 2):
+    if text[i] != text[n - i - 1]:
+      return False
+    return True
+text = "radar"
+if is_palindrome(text):
+  print(f"'{text}' - это палиндром.")
+else:
+  print(f"'{text}' - это не палиндром.")
