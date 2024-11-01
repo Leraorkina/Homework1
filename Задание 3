@@ -16,3 +16,5 @@ def calculate_rpn(expression):
         result = num1//num2
       stack.append(result)
   return stack.pop()
+print(calculate_rpn(["4", "13", "5", "/", "+"]))
+
