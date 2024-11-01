@@ -1,0 +1,18 @@
+def calculate_rpn(expression):
+  stack = []
+  for token in expression:
+    if token.isdigit():
+      stack.append(int(token))
+    else:
+      num2 = stack.pop()
+      num1 = stack.pop()
+      if token == "+":
+        result = num1 + num2
+      elif token == "-":
+        result = num1 - num2
+      elif token == "*":
+        result = num1 * num2
+      elif token == "/":
+        result = num1//num2
+      stack.append(result)
+  return stack.pop()
